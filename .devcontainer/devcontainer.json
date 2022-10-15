@@ -1,0 +1,6 @@
+{
+    "features": {
+        "terraform": "latest",
+        "github-cli": "latest"
+    }
+}

@@ -7,7 +7,7 @@ resource "aws_instance" "my_instance" {
     Name = "my_instance"
   }
   user_data_replace_on_change = true
-  user_data = <<EOF
+  user_data                   = <<EOF
   #!/bin/bash
   sudo mkdir /helloworld
   EOF
