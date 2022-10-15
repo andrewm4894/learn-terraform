@@ -6,13 +6,13 @@ on:
       - "*.tf"
     branches:
       - develop
-      - master
+      - main
   pull_request:
     paths:
       - "*.tf"
     branches:
       - develop
-      - master
+      - main
 
 env:
   TF_VAR_my_public_key: ${{ secrets.my_public_key }}
@@ -75,5 +75,5 @@ jobs:
             body: output
           })
     - name: Terraform Apply
-      if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
